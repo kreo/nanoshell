@@ -1,0 +1,22 @@
+{
+  "name": "nanoshell",
+  "version": "1.0.0",
+  "description": "node shell scripts",
+  "main": "index.js",
+  "author": "@_kreo",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "chalk": "^1.1.1",
+    "nodemon": "^1.9.1",
+    "shelljs": "^0.6.0",
+    "stylus": "^0.53.0"
+  },
+  "config": {
+    "wraiths": "/Users/mac/Sites/wraiths"
+  },
+  "scripts": {
+    "browserify": "browserify",
+    "stylus": "stylus"
+  }
+}
