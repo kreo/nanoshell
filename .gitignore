@@ -31,3 +31,30 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+#project
+.*
+!.gitignore
+!.editorconfig
+.idea
+*.py[cod]
+*.eml
+*.tar
+*.rar
+*.log
+*.zip
+media
+celerybeat-schedule
+celerybeat.pid
+bower_components
+_dist
+*.rdb
+*.dump
+Thumbs.db
+vendor
+/static
+Thumbs.db
+.DS_STORE
+nbproject
+*.sublime-project
+*.sublime-workspace
