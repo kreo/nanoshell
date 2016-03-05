@@ -8,6 +8,9 @@ function run(argv) {
         if (task !== undefined) {
             shell.exec(task());
         }
+        else if(val === 'list'){
+            utils.printTasks(tasks);
+        }
     });
 }
 
