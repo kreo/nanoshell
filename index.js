@@ -1,32 +1,18 @@
-var shell = require('./lib/shell');
-var tasks = require('./lib/tasks');
-var utils = require('./lib/utils');
+var shell = require('./lib/shell'),
+    tasks = require('./lib/tasks'),
+    utils = require('./lib/utils');
 
-var init = function () {
-
-    process.argv.forEach(function (val, index) {
-        switch (val) {
-            case 'styles':
-                shell.exec(tasks.styles());
-                break;
-
-            case 'scripts':
-                shell.exec(tasks.scripts());
-                break;
-
-            case 'static':
-                shell.exec(tasks.styles());
-                shell.exec(tasks.scripts());
-
-            case 'list':
-                utils.printTasks(tasks);
-
-            default:
-                break;
+function run(argv) {
+    argv.forEach(function(val, index) {
+        var task = tasks[val];
+        if (task !== undefined) {
+            shell.exec(task());
         }
     });
+}
 
-    console.log('entra 2');
+var init = function() {
+    run(process.argv);
 }
 
 module.exports = init();

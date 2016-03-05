@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "node shell scripts",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kreo/nanoshell.git"
+  },
   "author": "@_kreo",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "browserify": "^13.0.0",
     "chalk": "^1.1.1",
     "nodemon": "^1.9.1",
