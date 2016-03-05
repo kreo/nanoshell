@@ -9,18 +9,15 @@
   },
   "author": "@_kreo",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "browserify": "^13.0.0",
     "chalk": "^1.1.1",
     "nodemon": "^1.9.1",
-    "shelljs": "^0.6.0",
     "stylus": "^0.53.0"
   },
+  "devDependencies": {},
   "config": {
     "wraiths": "/Users/mac/Sites/wraiths"
   },
-  "scripts": {
-    "browserify": "browserify",
-    "stylus": "stylus"
-  }
+  "scripts": {}
 }
