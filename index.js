@@ -5,12 +5,8 @@ var shell = require('./lib/shell'),
 function run(argv) {
     argv.forEach(function(val, index) {
         var task = tasks[val];
-        if (task !== undefined) {
-            shell.exec(task());
-        }
-        else if(val === 'list'){
-            utils.printTasks(tasks);
-        }
+        if (task !== undefined) shell.exec(task());
+        else if(val === 'list') utils.printTasks(tasks);
     });
 }
 
