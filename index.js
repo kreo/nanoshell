@@ -30,8 +30,12 @@ var nanoshell = (function () {
     function run(argv) {
         argv.forEach(function(val, index) {
             var task = tasks[val];
-            if (task !== undefined) exec(task());
-            else if (val === 'list') utils.printTasks(tasks);
+            if (task !== undefined){
+                exec(task());
+            }
+            else if (val === 'list'){
+                utils.printTasks(tasks);
+            }
         });
     }
 
