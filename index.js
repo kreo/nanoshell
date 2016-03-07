@@ -9,9 +9,20 @@
 var nanoshell = (function () {
 
     var child_process = require('child_process'),
+        colors = require('chalk'),
         config = require('./lib/config'),
-        tasks = require('./lib/tasks'),
-        utils = require('./lib/utils');
+        tasks = require('./lib/tasks');
+
+    function printTasks (tasks) {
+        console.log(colors.gray(''));
+        console.log(colors.gray('Tasks'));
+        console.log(colors.gray('-------------------'));
+
+        for (var i = 0; i < Object.keys(tasks).length; i++) {
+            var task = Object.keys(tasks)[i];
+            console.log(colors.cyan(task));
+        }
+    }
 
     function exec(cmd, cb) {
         var parts = cmd.split(/\s+/g);
@@ -34,7 +45,7 @@ var nanoshell = (function () {
                 exec(task());
             }
             else if (val === 'list'){
-                utils.printTasks(tasks);
+                printTasks(tasks);
             }
         });
     }
